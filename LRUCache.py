@@ -11,3 +11,5 @@ class LRUCache:
         self.cache = {}
         self.left = Node(0, 0)   # LRU end (dummy)
         self.right = Node(0, 0)  # MRU end (dummy)
+        self.left.next = self.right
+        self.right.prev = self.left
