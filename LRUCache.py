@@ -7,3 +7,5 @@ class Node:
         
 class LRUCache:
     def __init__(self, capacity: int):
+        self.cap = capacity
+        self.cache = {}
