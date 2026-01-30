@@ -2,3 +2,5 @@
 #146. LRU Cache
 class Node:
     def __init__(self, key, value):
+        self.key, self.value = key, value
+        self.prev = self.next = None
