@@ -21,3 +21,5 @@ class LRUCache:
         nxt.prev = prev
 
     def insert(self, node: Node) -> None:
+        prev, nxt = self.right.prev, self.right
+        prev.next = node
