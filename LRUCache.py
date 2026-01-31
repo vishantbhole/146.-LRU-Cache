@@ -29,4 +29,6 @@ class LRUCache:
 
 
     def get(self, key: int) -> int:
+         if key in self.cache:
+            node = self.cache[key]
 
