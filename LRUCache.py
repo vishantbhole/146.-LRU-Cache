@@ -16,3 +16,6 @@ class LRUCache:
 
 
      def remove(self, node: Node) -> None:
+        prev, nxt = node.prev, node.next
+        prev.next = nxt
+        nxt.prev = prev
