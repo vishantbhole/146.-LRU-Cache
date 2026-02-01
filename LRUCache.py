@@ -52,3 +52,7 @@ class LRUCache:
 def run_ops(ops, args):
     out = []
     obj = None
+    for op, a in zip(ops, args):
+        if op == "LRUCache":
+            obj = LRUCache(a[0])
+            out.append(None)
