@@ -59,3 +59,5 @@ def run_ops(ops, args):
         elif op == "put":
             obj.put(a[0], a[1])
             out.append(None)
+        elif op == "get":
+            out.append(obj.get(a[0]))
