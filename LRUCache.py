@@ -47,5 +47,8 @@ class LRUCache:
         if len(self.cache) > self.cap:
             lru = self.left.next
             self.remove(lru)
-            del self.cache[lru.key]
+            del self.cache[lru.key
 
+def run_ops(ops, args):
+    out = []
+    obj = None
