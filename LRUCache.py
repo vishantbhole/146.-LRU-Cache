@@ -36,3 +36,5 @@ class LRUCache:
             return node.value
         return -1
 
+     def put(self, key: int, value: int) -> None:
+
