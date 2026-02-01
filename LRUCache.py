@@ -56,3 +56,6 @@ def run_ops(ops, args):
         if op == "LRUCache":
             obj = LRUCache(a[0])
             out.append(None)
+        elif op == "put":
+            obj.put(a[0], a[1])
+            out.append(None)
