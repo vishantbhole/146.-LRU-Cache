@@ -37,4 +37,6 @@ class LRUCache:
         return -1
 
      def put(self, key: int, value: int) -> None:
+         if key in self.cache:
+            self.remove(self.cache[key])
 
