@@ -61,3 +61,6 @@ def run_ops(ops, args):
             out.append(None)
         elif op == "get":
             out.append(obj.get(a[0]))
+        else:
+            raise ValueError(f"Unknown op: {op}")
+    return out
