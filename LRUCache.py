@@ -64,3 +64,10 @@ def run_ops(ops, args):
         else:
             raise ValueError(f"Unknown op: {op}")
     return out
+
+
+if __name__ == "__main__":
+    ops = ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
+    args = [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+    print(run_ops(ops, args))
+    # Expected: [None, None, None, 1, None, -1, None, -1, 3, 4]
