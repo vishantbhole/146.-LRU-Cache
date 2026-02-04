@@ -1,4 +1,3 @@
-
 #146. LRU Cache
 class Node:
     def __init__(self, key, value):
@@ -13,7 +12,6 @@ class LRUCache:
         self.right = Node(0, 0)  # MRU end (dummy)
         self.left.next = self.right
         self.right.prev = self.left
-
 
      def remove(self, node: Node) -> None:
         prev, nxt = node.prev, node.next
@@ -71,3 +69,8 @@ if __name__ == "__main__":
     args = [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
     print(run_ops(ops, args))
     # Expected: [None, None, None, 1, None, -1, None, -1, 3, 4]
+
+    ops1 = ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
+    args1 = [[2], [1, 1], [5, 5], [5], [6, 6], [6], [4, 4], [5], [1], [4]]
+    print(run_ops(ops1, args1))
+    # Expected: [None, None, None, 5, None, 6, None, -1, -1, 4]
